@@ -9,7 +9,7 @@ Content of this repo is guideline on HOW to create an **ec2 instance** with **Te
 - `Gemfile` -  Specify the the ruby version, and all gems needed for Kitchen test
 - `test/integration/default/controls/operating_system_spec.rb` - ruby file which contain our kitchen test.
 - `test/integration/default/inspec.yml` - contain the test system's name - `default`
-- `<file>.env` - <span style="color:red">**ATTENTION! This file is not uploaded because contain sensitive information!**</span> Contain AWS information needed to terraform in order to create the ec2 image. Please create your own file (the name, before extention, is not really matters) in the following format:
+- `<file>.env` - **ATTENTION! This file is not uploaded because contain sensitive information!** Contain AWS information needed to terraform in order to create the ec2 image. Please create your own file (the name, before extention, is not really matters) in the following format:
   ```
   export AWS_ACCESS_KEY_ID=<AWS_Access_Key_ID>
   export AWS_SECRET_ACCESS_KEY=<AWS_secret_key>
