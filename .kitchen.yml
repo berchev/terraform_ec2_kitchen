@@ -1,0 +1,27 @@
+---
+driver:
+  name: terraform
+  variable_files:
+    - testing.tfvars
+
+provisioner:
+  name: terraform
+
+platforms:
+  - name: ubuntu
+
+transport:
+  name: ssh
+  ssh_key: /home/gberchev/ec2_key_pair/gberchev_key_pair.pem
+
+verifier:
+  name: terraform
+  format: doc
+  systems:
+    - name: default 
+      backend: local 
+      hostnames: public_dns
+      username: ubuntu
+
+suites:
+  - name: default 
