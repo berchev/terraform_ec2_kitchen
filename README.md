@@ -1,4 +1,4 @@
-# terraform_ec2_kitchen
+# terraform_kitchen_ec2
 Content of this repo is guideline on HOW to create an **ec2 instance** with **Terraform** and then to test it with **Kitchen**.
 
 **Note that all this is tested on Ubuntu OS**
