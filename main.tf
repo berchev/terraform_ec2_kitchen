@@ -14,3 +14,7 @@ resource "aws_instance" "server" {
 output "server_name" {
   value = "${aws_instance.server.tags.Name}"
 }
+
+output "public_ip_address" {
+  value = "${aws_instance.server.public_ip}"
+}
