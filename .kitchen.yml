@@ -1,4 +1,3 @@
----
 driver:
   name: terraform
   variable_files:
@@ -10,18 +9,15 @@ provisioner:
 platforms:
   - name: ubuntu
 
-transport:
-  name: ssh
-  ssh_key: /home/gberchev/ec2_key_pair/gberchev_key_pair.pem
-
 verifier:
   name: terraform
-  format: doc
   systems:
-    - name: default 
-      backend: local 
-      hostnames: public_dns
-      username: ubuntu
-
+    - name: default
+      backend: ssh
+      user: ubuntu
+      hosts_output: public_ip_address 
+      key_files:
+      - /home/gberchev/ec2_key_pair/gberchev_key_pair.pem
+       
 suites:
-  - name: default 
+- name: default
